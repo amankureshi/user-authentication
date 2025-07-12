@@ -14,4 +14,10 @@ export const AuthProvider = ({ children }) => {
         setUser(userData);
     };
 
+    const logout = () => {
+        localStorage.removeItem("user")
+        localStorage.removeItem("token")
+        setUser(null)
+    }
+
 export default AuthContext;
