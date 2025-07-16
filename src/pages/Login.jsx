@@ -6,6 +6,14 @@ const Login = () => {
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <input type="text" name="username" placeholder="Username" />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        {error && <p className="error">{error}</p>}
+        <button type="submit">Login</button>
       </form>
     </div>
   );
